@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#peso {
+  font-family: monospace, Monaco;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#peso td, #peso th {
+  border-radius: 10px;
+  padding: 8px;
+}
+
+#peso tr:nth-child(even){background-color: #eaf4fa;}
+
+#peso tr:hover {background-color: #99e7ff;}
+
+#peso th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #a6d6f7;
+  color: white;
+}
+
+body{
+    background-image: url(data:image/jpeg;base64,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);
+    background-repeat: no-repeat;
+    background-size: 1900px 980px;
+}
+h1{
+  text-align: center;
+  font-family: fantasy, copperplate;
+  color: #0099ff;
+}
+h2{
+    text-align: center;
+  font-family: fantasy, copperplate;
+  color: #0099ff;
+}
+h4{
+    text-align: center;
+  font-family: fantasy, copperplate;
+}
+td{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<br>
+<h1>Tá, você precisa emagrecer, segue o líder <3</h1>
+
+<table id="peso">
+  <tr>
+    <th>Obesidade grave</th>
+    
+  </tr>
+  <tr>
+    <td>Frutos Secos</td>
+   
+  </tr>
+  <tr>
+    <td>Abacate e Guacamole</td>
+   
+
+  </tr>
+  <tr>
+    <td>Salada com molhos</td>
+   
+  </tr>
+  <tr>
+    <td>Vegetais</td>
+    
+  </tr>
+  <tr>
+    <td>Exercicios fisicos intensos</td>
+
+  </tr>
+  <tr>
+    <td>Gorduras Boas</td>
+   
+  </tr>
+  <tr>
+    <td>Água a cada 3 horas</td>
+    
+  </tr>
+  <tr>
+    <td>Legumes</td>
+    
+  </tr>
+  <tr>
+    <td>Vitaminas</td>
+    
+</table>
+
+<br>
